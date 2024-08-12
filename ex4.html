@@ -1,0 +1,94 @@
+<!--4- Usando o HTML e CSS, criar um formulário para validar os dados de entrada, login e senha. Usar a função para que ao clicar no botão, a mensagem, de validação ou não, apareça na tela.-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body{
+            background-color:#286a75 ;
+            margin: 10%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 60%;
+            font-family:'Courier New', Courier, monospace;
+            font-weight: bold;
+        }
+        
+        .nome{
+            font-size:large;
+        }
+           
+        
+           
+        #button{
+            border-radius: 4px;
+            width: 50%;
+            padding: 8px;
+            margin: 10px;
+            background-color: #b7f4ff;
+        }
+        
+        
+        form{
+            margin: auto;
+        
+            padding: 10px;
+            border-radius: 4px;
+            background-color: #ffffff;
+        
+        }
+        
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="#.php" method="get">
+        <h1>Login:</h1>
+        <div class="nome">
+    <label for="nome">Login:</label>
+    <input type="text" id="login" placeholder="Insira seu nome de usuário: ">
+
+
+    <br>
+
+
+    <label for="senha">Senha:</label>
+    <input type="password" id="senha" placeholder="Insira sua senha: ">
+    </div>
+
+    <center>
+    <input type="button" id="button" value="Autenticar" onclick="autenticar()">
+</center>
+
+    <p id="status"></p>
+
+</form>
+</body>
+</html>
+
+
+<script>
+    function autenticar() {
+    let usuario = document.getElementById("login").value;
+    let senha = document.getElementById("senha").value;
+ 
+    if (usuario==="bibs" && senha==="nina") {
+     document.getElementById("status").innerHTML="Usuário autenticado.";
+     } else {
+         document.getElementById("status").innerHTML="Usuário ou senha incorretos.";
+    }
+ }
+</script>
+
+
+
+
+
